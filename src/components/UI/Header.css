@@ -1,0 +1,13 @@
+header {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem 0rem;
+    border-bottom: 2px solid gray;
+}
