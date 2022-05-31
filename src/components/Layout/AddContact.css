@@ -1,0 +1,28 @@
+.add_contact_section {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 0rem 1.5rem 0rem;
+    border-bottom: 1px solid gray;
+}
+
+.add_contact_section h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.add_contact_section button {
+    padding: 0.5rem;
+    color: white;
+    background-color: skyblue;
+    border: none;
+    border-radius: 4px; 
+}
+
+
+

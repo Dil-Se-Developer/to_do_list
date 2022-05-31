@@ -1,20 +1,26 @@
 import React from "react";
-import Button from "../UI/Button";
+import SubHeader from "../UI/SubHeader";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = (props) => {
 
-    const onAdd = (event) => {
-        event.preventDefault();
-    }
+  const Navigate = useNavigate();
+
+  const onAdd = (event) => {
+    event.preventDefault();
+    Navigate("/addcontact");
+  }
 
   return (
-      <>
-        <div className="home_section">
-            <h2>Contacts List</h2>
-            <Button onClick={onAdd} btnName={'Add Contact'}></Button>
-        </div>
-      </>
+    <>
+      <SubHeader
+        customClass='subheader_section'
+        subHeading='Contacts List'
+        btnHandler={onAdd}
+        btnName={'Add Contact'}
+      />
+    </>
   );
 
 };
