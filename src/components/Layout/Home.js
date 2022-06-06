@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import SubHeader from "../UI/SubHeader";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setContactDetails } from "../../redux/actions/contactDetailsActions"
 import { useNavigate } from "react-router-dom";
-// import ContactList from "./ContactList";
+import ContactList from "./ContactList";
 import "./Home.css";
 import axios from "axios";
 
-const Home = (props) => {
+const Home = () => {
   const Navigate = useNavigate();
 
-  const allContacts = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log(allContacts);
-
-  // const [addValues, setAddValues] = useState([])
 
   useEffect(() => {
     axios
@@ -23,7 +19,7 @@ const Home = (props) => {
       .catch((error) => {
         console.log(error)
       })
-  },[])
+  }, [])
 
   const onAdd = (event) => {
     event.preventDefault();
@@ -38,7 +34,7 @@ const Home = (props) => {
         btnHandler={onAdd}
         btnName={"Add Contact"}
       />
-      {/* <ContactList/> */}
+      {<ContactList />}
     </>
   );
 };

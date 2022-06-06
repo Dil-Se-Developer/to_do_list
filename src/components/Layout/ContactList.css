@@ -35,10 +35,10 @@
     font-size: 1.5rem;
 }
 
-.contact_list_icons svg:nth-child(1) {
+.contact_list_icons div svg {
     color: blueviolet;
 }
 
-.contact_list_icons svg:nth-child(2) {
-    color: red;
+.delete_content svg{
+    color: red !important;
 }

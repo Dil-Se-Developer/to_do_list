@@ -43,7 +43,7 @@ const AddContact = () => {
   return (
     <>
       <SubHeader
-        customClass="subheader_section"
+        customClass="subheader_section danger_btn"
         subHeading="Add Contact"
         btnHandler={onCancelAddContact}
         btnName={"Cancel"}
