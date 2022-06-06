@@ -7,6 +7,7 @@ import "./AddContact.css";
 import axios from "axios";
 
 const AddContact = () => {
+  
   const Navigate = useNavigate();
 
   const initialValues = {

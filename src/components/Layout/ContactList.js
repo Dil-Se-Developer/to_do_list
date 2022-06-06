@@ -5,7 +5,7 @@ import "./ContactList.css";
 
 const ContactList = (props) => {
   let {addValues} = props;
-//   console.log(addValues);
+  // console.log(addValues);
   const renderList = addValues.map((addValue) => {
     const { id, name, emailid } = addValue;
     return (
