@@ -1,0 +1,44 @@
+.contact_list {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 550px;
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0rem 0rem 1rem 0rem;
+    border-bottom: 1px solid gray;
+}
+
+.contact_list_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_list_text h4 {
+    font-size: 1.2rem;
+}
+
+.contact_list_text p {
+    font-size: 1rem;
+    color: blueviolet;
+}
+
+.contact_list_icons {
+    display: flex;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.contact_list_icons svg {
+    font-size: 1.5rem;
+}
+
+.contact_list_icons svg:nth-child(1) {
+    color: blueviolet;
+}
+
+.contact_list_icons svg:nth-child(2) {
+    color: red;
+}

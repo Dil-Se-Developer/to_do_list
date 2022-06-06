@@ -49,3 +49,12 @@
     border-radius: 8px;
     width: 550px;
 }
+
+.form_card button {
+    padding: 0.5rem;
+    color: white;
+    background-color: skyblue;
+    border: none;
+    border-radius: 4px; 
+    margin-top: 1rem;
+}
