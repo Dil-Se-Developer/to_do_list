@@ -9,8 +9,8 @@ import axios from "axios";
 
 const Home = () => {
   const Navigate = useNavigate();
-  const allContacts = useSelector((state) => state);
-  console.log(allContacts);
+  // const allContacts = useSelector((state) => state);
+  // console.log(allContacts);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,6 +21,7 @@ const Home = () => {
         console.log(error);
       });
   }, []);
+  
   
   // let addValues = allContacts.allContacts;
   // dispatch(setContactDetails(addValues));
