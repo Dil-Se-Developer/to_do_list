@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import { createStore } from "@reduxjs/toolkit";
 import reducers from "./reducers/index"
 
 const store = createStore(

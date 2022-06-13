@@ -7,7 +7,6 @@ import "./AddContact.css";
 import axios from "axios";
 
 const AddContact = () => {
-  
   const Navigate = useNavigate();
 
   const initialValues = {
@@ -24,12 +23,10 @@ const AddContact = () => {
 
   const onAddContact = (event) => {
     event.preventDefault();
-    axios
-      .post("http://localhost:3000/users", formValues)
-      .then((response) => response.data)
-      .catch((error) => {
-        console.log(error);
-      });
+    axios.post("http://localhost:3000/users", formValues)
+    .catch((error) => {
+      console.log(error);
+    });
     Navigate("/");
   };
 

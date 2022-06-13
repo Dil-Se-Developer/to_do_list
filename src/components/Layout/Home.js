@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import SubHeader from "../UI/SubHeader";
 import { useSelector, useDispatch } from "react-redux";
-import { setContactDetails } from "../../redux/actions/contactDetailsActions";
+// import { setContactDetails } from "../../redux/actions/contactDetailsActions";
+import { setContactDetails } from "../../redux_toolkit/slices/contactDetailsSlice"
 import { useNavigate } from "react-router-dom";
 import ContactList from "./ContactList";
 import "./Home.css";
@@ -9,7 +10,7 @@ import axios from "axios";
 
 const Home = () => {
   const Navigate = useNavigate();
-  // const allContacts = useSelector((state) => state);
+  // const allContacts = useSelector((state) => state.allContacts.items);
   // console.log(allContacts);
   const dispatch = useDispatch();
 
