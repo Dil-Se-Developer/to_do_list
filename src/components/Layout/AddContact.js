@@ -24,15 +24,17 @@ const AddContact = () => {
   const onAddContact = (event) => {
     event.preventDefault();
     axios.post("http://localhost:3000/users", formValues)
-    .catch((error) => {
-      console.log(error);
-    });
+      .catch((error) => {
+        console.log(error);
+      });
     Navigate("/");
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormValues({ ...formValues, [name]: value });
+    setFormValues((prevFormValues) => {
+      return { ...prevFormValues, [name]: value }
+    })
   };
 
   //   console.log(formValues);

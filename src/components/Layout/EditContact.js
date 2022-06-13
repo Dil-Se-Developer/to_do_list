@@ -11,14 +11,13 @@ const EditContact = () => {
   let { id } = param;
   //   console.log(id);
 
-    //   const [formValues, setFormValues] = useState(initialValues);
 
   const [existingValues, setExistingValues] = useState({});
 
-  const initialValues = {
-    name: existingValues.name,
-    emailid: existingValues.emailid,
-  };
+  // const initialValues = {
+  //   name: existingValues.name,
+  //   emailid: existingValues.emailid,
+  // };
 
   const onCancelAddContact = (event) => {
     event.preventDefault();
@@ -36,19 +35,21 @@ const EditContact = () => {
 
   const onUpdateContact = (event) => {
     event.preventDefault();
-    // axios.put(`http://localhost:3000/users/${id}`, formValues)
-    // .catch((error) => {
-    //   console.log(error);
-    // });
-    // Navigate("/");
+    axios.put(`http://localhost:3000/users/${id}`, existingValues)
+    .catch((error) => {
+      console.log(error);
+    });
+    Navigate("/");
   };
 
-  //   const handleChange = (event) => {
-  //     const { name, value } = event.target;
-  //     setFormValues({ ...formValues, [name]: value });
-  //   };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setExistingValues((prevExistingValues) => {
+      return { ...prevExistingValues, [name]: value }
+    });
+  };
 
-  //   console.log(formValues);
+  console.log(existingValues);
 
   return (
     <>
@@ -65,16 +66,16 @@ const EditContact = () => {
             inputLabel="Name:-"
             inputType="text"
             inputName="name"
-            inputValue={initialValues.name}
-            // onHandleChange={handleChange}
+            inputValue={existingValues.name}
+            onHandleChange={handleChange}
           />
           <FormInput
             customClass={"form_input"}
             inputLabel="Email ID:-"
             inputType="email"
             inputName="emailid"
-            inputValue={initialValues.emailid}
-            // onHandleChange={handleChange}
+            inputValue={existingValues.emailid}
+            onHandleChange={handleChange}
           />
           <Button btnName="Update" btnHandler={onUpdateContact} />
         </form>
